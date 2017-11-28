@@ -121,6 +121,7 @@ with tf.Session() as sess:
 	train_writer = tf.summary.FileWriter("Summaries/train", sess.graph)
 	sess.run(tf.global_variables_initializer())
 	
+	print("2000 batches total")
 	for i in range(1, 2001):
 		batch = mnist.train.next_batch(50)
 		train_step.run(feed_dict={
